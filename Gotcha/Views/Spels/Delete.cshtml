@@ -1,0 +1,72 @@
+﻿@model Gotcha.Models.Spel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Spel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.gameName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gameName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.safeZone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.safeZone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.beginDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.beginDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.endDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.endDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.beginTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.beginTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.endTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.endTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

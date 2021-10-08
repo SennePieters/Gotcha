@@ -1,0 +1,66 @@
+﻿@model Gotcha.Models.Spel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Spel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.gameName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gameName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.safeZone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.safeZone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.beginDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.beginDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.endDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.endDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.beginTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.beginTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.endTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.endTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.gameID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
